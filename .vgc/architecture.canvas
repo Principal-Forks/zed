@@ -1,0 +1,992 @@
+{
+  "vv": {
+    "name": "Zed Codebase Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "gpui": {
+        "label": "GPUI",
+        "description": "GPU-accelerated UI framework",
+        "color": "#9B59B6",
+        "icon": "Layers"
+      },
+      "data_structures": {
+        "label": "Data Structures",
+        "description": "rope, sum_tree, text, collections",
+        "color": "#8E44AD",
+        "icon": "Database"
+      },
+      "editor": {
+        "label": "Editor",
+        "description": "Core editor functionality",
+        "color": "#27AE60",
+        "icon": "FileEdit"
+      },
+      "multi_buffer": {
+        "label": "Multi Buffer",
+        "description": "Manages multiple text buffers",
+        "color": "#2ECC71",
+        "icon": "Files"
+      },
+      "language": {
+        "label": "Language",
+        "description": "Tree-sitter integration",
+        "color": "#27AE60",
+        "icon": "Code"
+      },
+      "lsp": {
+        "label": "LSP",
+        "description": "Language Server Protocol client",
+        "color": "#2ECC71",
+        "icon": "Sparkles"
+      },
+      "project": {
+        "label": "Project",
+        "description": "Central project coordination",
+        "color": "#3498DB",
+        "icon": "FolderOpen"
+      },
+      "workspace": {
+        "label": "Workspace",
+        "description": "Window/workspace management",
+        "color": "#2980B9",
+        "icon": "LayoutGrid"
+      },
+      "worktree": {
+        "label": "Worktree",
+        "description": "File tree representation",
+        "color": "#3498DB",
+        "icon": "FolderTree"
+      },
+      "file_system": {
+        "label": "File System",
+        "description": "File system interface",
+        "color": "#5DADE2",
+        "icon": "HardDrive"
+      },
+      "collab": {
+        "label": "Collab Server",
+        "description": "Real-time collaboration",
+        "color": "#E67E22",
+        "icon": "Server"
+      },
+      "rpc": {
+        "label": "RPC",
+        "description": "Communication protocol",
+        "color": "#D68910",
+        "icon": "Radio"
+      },
+      "client": {
+        "label": "Client",
+        "description": "Client-side networking",
+        "color": "#E67E22",
+        "icon": "User"
+      },
+      "call": {
+        "label": "Call",
+        "description": "Audio/video calling",
+        "color": "#F39C12",
+        "icon": "Video"
+      },
+      "agent": {
+        "label": "Agent",
+        "description": "AI assistant",
+        "color": "#F1C40F",
+        "icon": "Bot"
+      },
+      "language_model": {
+        "label": "Language Model",
+        "description": "LLM abstraction",
+        "color": "#F4D03F",
+        "icon": "Brain"
+      },
+      "context_server": {
+        "label": "Context Server",
+        "description": "Context management",
+        "color": "#F1C40F",
+        "icon": "BookOpen"
+      },
+      "llm_providers": {
+        "label": "LLM Providers",
+        "description": "Anthropic, OpenAI, etc.",
+        "color": "#F9E79F",
+        "icon": "Plug"
+      },
+      "terminal": {
+        "label": "Terminal",
+        "description": "Terminal emulator",
+        "color": "#E74C3C",
+        "icon": "Terminal"
+      },
+      "repl": {
+        "label": "REPL",
+        "description": "Jupyter integration",
+        "color": "#C0392B",
+        "icon": "Play"
+      },
+      "debugger": {
+        "label": "Debugger",
+        "description": "DAP support",
+        "color": "#E74C3C",
+        "icon": "Bug"
+      },
+      "diagnostics": {
+        "label": "Diagnostics",
+        "description": "Error/warning display",
+        "color": "#EC7063",
+        "icon": "AlertCircle"
+      },
+      "search": {
+        "label": "Search",
+        "description": "Project-wide search",
+        "color": "#E74C3C",
+        "icon": "Search"
+      },
+      "extension": {
+        "label": "Extension",
+        "description": "Extension management",
+        "color": "#9B59B6",
+        "icon": "Puzzle"
+      },
+      "extension_api": {
+        "label": "Extension API",
+        "description": "Public API",
+        "color": "#8E44AD",
+        "icon": "Box"
+      },
+      "extension_host": {
+        "label": "Extension Host",
+        "description": "WASM runtime",
+        "color": "#7D3C98",
+        "icon": "Container"
+      },
+      "remote": {
+        "label": "Remote (Client)",
+        "description": "Remote editing client",
+        "color": "#1ABC9C",
+        "icon": "Cloud"
+      },
+      "remote_server": {
+        "label": "Remote Server",
+        "description": "Remote server component",
+        "color": "#16A085",
+        "icon": "CloudCog"
+      },
+      "ui": {
+        "label": "UI Components",
+        "description": "Reusable UI components",
+        "color": "#27AE60",
+        "icon": "Package"
+      },
+      "theme": {
+        "label": "Theme",
+        "description": "Theme system",
+        "color": "#2ECC71",
+        "icon": "Palette"
+      },
+      "zed": {
+        "label": "Zed",
+        "description": "Main application",
+        "color": "#FF6B6B",
+        "icon": "Zap"
+      }
+    },
+    "edgeTypes": {
+      "depends_on": {
+        "label": "depends on",
+        "style": "solid",
+        "color": "#E91E63"
+      },
+      "uses": {
+        "label": "uses",
+        "style": "dashed",
+        "color": "#9B59B6"
+      },
+      "communicates": {
+        "label": "communicates",
+        "style": "dotted",
+        "color": "#0088FF"
+      },
+      "extends": {
+        "label": "extends",
+        "style": "solid",
+        "color": "#00CC66"
+      },
+      "manages": {
+        "label": "manages",
+        "style": "solid",
+        "color": "#FF9900"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "gpui",
+      "type": "text",
+      "text": "GPUI",
+      "x": -192,
+      "y": 1499,
+      "width": 150,
+      "height": 80,
+      "color": "#9B59B6",
+      "vv": {
+        "nodeType": "gpui",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "data_structures",
+      "type": "text",
+      "text": "Data Structures",
+      "x": -936,
+      "y": 1225,
+      "width": 150,
+      "height": 80,
+      "color": "#8E44AD",
+      "vv": {
+        "nodeType": "data_structures",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "editor",
+      "type": "text",
+      "text": "Editor",
+      "x": -851,
+      "y": 729,
+      "width": 150,
+      "height": 80,
+      "color": "#27AE60",
+      "vv": {
+        "nodeType": "editor",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "multi_buffer",
+      "type": "text",
+      "text": "Multi Buffer",
+      "x": -937,
+      "y": 991,
+      "width": 150,
+      "height": 80,
+      "color": "#2ECC71",
+      "vv": {
+        "nodeType": "multi_buffer",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "language",
+      "type": "text",
+      "text": "Language",
+      "x": -596,
+      "y": 1500,
+      "width": 150,
+      "height": 80,
+      "color": "#27AE60",
+      "vv": {
+        "nodeType": "language",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "lsp",
+      "type": "text",
+      "text": "LSP",
+      "x": 18,
+      "y": 1812,
+      "width": 150,
+      "height": 80,
+      "color": "#2ECC71",
+      "vv": {
+        "nodeType": "lsp",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "project",
+      "type": "text",
+      "text": "Project",
+      "x": 363,
+      "y": 1047,
+      "width": 150,
+      "height": 80,
+      "color": "#3498DB",
+      "vv": {
+        "nodeType": "project",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "workspace",
+      "type": "text",
+      "text": "Workspace",
+      "x": -850,
+      "y": 172,
+      "width": 150,
+      "height": 80,
+      "color": "#2980B9",
+      "vv": {
+        "nodeType": "workspace",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "worktree",
+      "type": "text",
+      "text": "Worktree",
+      "x": 584,
+      "y": 412,
+      "width": 150,
+      "height": 80,
+      "color": "#3498DB",
+      "vv": {
+        "nodeType": "worktree",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "file_system",
+      "type": "text",
+      "text": "File System",
+      "x": 380,
+      "y": 498,
+      "width": 150,
+      "height": 80,
+      "color": "#5DADE2",
+      "vv": {
+        "nodeType": "file_system",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "collab",
+      "type": "text",
+      "text": "Collab Server",
+      "x": 1336,
+      "y": 757,
+      "width": 150,
+      "height": 80,
+      "color": "#E67E22",
+      "vv": {
+        "nodeType": "collab",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "rpc",
+      "type": "text",
+      "text": "RPC",
+      "x": 1578,
+      "y": 918,
+      "width": 150,
+      "height": 80,
+      "color": "#D68910",
+      "vv": {
+        "nodeType": "rpc",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "client",
+      "type": "text",
+      "text": "Client",
+      "x": 1405,
+      "y": 565,
+      "width": 150,
+      "height": 80,
+      "color": "#E67E22",
+      "vv": {
+        "nodeType": "client",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "call",
+      "type": "text",
+      "text": "Call",
+      "x": 1639,
+      "y": 139,
+      "width": 150,
+      "height": 80,
+      "color": "#F39C12",
+      "vv": {
+        "nodeType": "call",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "agent",
+      "type": "text",
+      "text": "Agent",
+      "x": -455,
+      "y": 178,
+      "width": 150,
+      "height": 80,
+      "color": "#F1C40F",
+      "vv": {
+        "nodeType": "agent",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "language_model",
+      "type": "text",
+      "text": "Language Model",
+      "x": -277,
+      "y": 316,
+      "width": 150,
+      "height": 80,
+      "color": "#F4D03F",
+      "vv": {
+        "nodeType": "language_model",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "context_server",
+      "type": "text",
+      "text": "Context Server",
+      "x": -626,
+      "y": 313,
+      "width": 150,
+      "height": 80,
+      "color": "#F1C40F",
+      "vv": {
+        "nodeType": "context_server",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "llm_providers",
+      "type": "text",
+      "text": "LLM Providers",
+      "x": -275,
+      "y": 493,
+      "width": 150,
+      "height": 80,
+      "color": "#F9E79F",
+      "vv": {
+        "nodeType": "llm_providers",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "terminal",
+      "type": "text",
+      "text": "Terminal",
+      "x": 840,
+      "y": 117,
+      "width": 150,
+      "height": 80,
+      "color": "#E74C3C",
+      "vv": {
+        "nodeType": "terminal",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "repl",
+      "type": "text",
+      "text": "REPL",
+      "x": 474,
+      "y": -216,
+      "width": 150,
+      "height": 80,
+      "color": "#C0392B",
+      "vv": {
+        "nodeType": "repl",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "debugger",
+      "type": "text",
+      "text": "Debugger",
+      "x": 593,
+      "y": 1603,
+      "width": 150,
+      "height": 80,
+      "color": "#E74C3C",
+      "vv": {
+        "nodeType": "debugger",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "diagnostics",
+      "type": "text",
+      "text": "Diagnostics",
+      "x": 261,
+      "y": 1607,
+      "width": 150,
+      "height": 80,
+      "color": "#EC7063",
+      "vv": {
+        "nodeType": "diagnostics",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "search",
+      "type": "text",
+      "text": "Search",
+      "x": 93,
+      "y": 833,
+      "width": 150,
+      "height": 80,
+      "color": "#E74C3C",
+      "vv": {
+        "nodeType": "search",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "extension",
+      "type": "text",
+      "text": "Extension",
+      "x": 82,
+      "y": 77,
+      "width": 150,
+      "height": 80,
+      "color": "#9B59B6",
+      "vv": {
+        "nodeType": "extension",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "extension_api",
+      "type": "text",
+      "text": "Extension API",
+      "x": 82,
+      "y": 490,
+      "width": 150,
+      "height": 80,
+      "color": "#8E44AD",
+      "vv": {
+        "nodeType": "extension_api",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "extension_host",
+      "type": "text",
+      "text": "Extension Host",
+      "x": 84,
+      "y": 324,
+      "width": 150,
+      "height": 80,
+      "color": "#7D3C98",
+      "vv": {
+        "nodeType": "extension_host",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "remote",
+      "type": "text",
+      "text": "Remote (Client)",
+      "x": 592,
+      "y": 834,
+      "width": 150,
+      "height": 80,
+      "color": "#1ABC9C",
+      "vv": {
+        "nodeType": "remote",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "remote_server",
+      "type": "text",
+      "text": "Remote Server",
+      "x": 763,
+      "y": 1023,
+      "width": 150,
+      "height": 80,
+      "color": "#16A085",
+      "vv": {
+        "nodeType": "remote_server",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "ui",
+      "type": "text",
+      "text": "UI Components",
+      "x": -608,
+      "y": 731,
+      "width": 150,
+      "height": 80,
+      "color": "#27AE60",
+      "vv": {
+        "nodeType": "ui",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "theme",
+      "type": "text",
+      "text": "Theme",
+      "x": 1123,
+      "y": 864,
+      "width": 150,
+      "height": 80,
+      "color": "#2ECC71",
+      "vv": {
+        "nodeType": "theme",
+        "shape": "rect"
+      }
+    },
+    {
+      "id": "zed",
+      "type": "text",
+      "text": "Zed",
+      "x": 77,
+      "y": -219,
+      "width": 150,
+      "height": 80,
+      "color": "#FF6B6B",
+      "vv": {
+        "nodeType": "zed",
+        "shape": "rect"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "fromNode": "editor",
+      "toNode": "gpui",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_2",
+      "fromNode": "ui",
+      "toNode": "gpui",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_3",
+      "fromNode": "workspace",
+      "toNode": "gpui",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_4",
+      "fromNode": "editor",
+      "toNode": "multi_buffer",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_5",
+      "fromNode": "editor",
+      "toNode": "language",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_6",
+      "fromNode": "multi_buffer",
+      "toNode": "data_structures",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_7",
+      "fromNode": "language",
+      "toNode": "lsp",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_8",
+      "fromNode": "project",
+      "toNode": "language",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_9",
+      "fromNode": "project",
+      "toNode": "lsp",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_10",
+      "fromNode": "project",
+      "toNode": "worktree",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_11",
+      "fromNode": "worktree",
+      "toNode": "file_system",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_12",
+      "fromNode": "workspace",
+      "toNode": "project",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_13",
+      "fromNode": "workspace",
+      "toNode": "editor",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_14",
+      "fromNode": "collab",
+      "toNode": "rpc",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_15",
+      "fromNode": "client",
+      "toNode": "rpc",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_16",
+      "fromNode": "client",
+      "toNode": "collab",
+      "color": "#0088FF",
+      "vv": {
+        "edgeType": "communicates"
+      }
+    },
+    {
+      "id": "edge_17",
+      "fromNode": "call",
+      "toNode": "client",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_18",
+      "fromNode": "agent",
+      "toNode": "language_model",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_19",
+      "fromNode": "agent",
+      "toNode": "context_server",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_20",
+      "fromNode": "language_model",
+      "toNode": "llm_providers",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_21",
+      "fromNode": "project",
+      "toNode": "debugger",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_22",
+      "fromNode": "diagnostics",
+      "toNode": "lsp",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_23",
+      "fromNode": "search",
+      "toNode": "project",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_24",
+      "fromNode": "extension_host",
+      "toNode": "extension_api",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_25",
+      "fromNode": "extension",
+      "toNode": "extension_host",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_26",
+      "fromNode": "remote",
+      "toNode": "remote_server",
+      "color": "#0088FF",
+      "vv": {
+        "edgeType": "communicates"
+      }
+    },
+    {
+      "id": "edge_27",
+      "fromNode": "remote",
+      "toNode": "project",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_28",
+      "fromNode": "theme",
+      "toNode": "gpui",
+      "color": "#00CC66",
+      "vv": {
+        "edgeType": "extends"
+      }
+    },
+    {
+      "id": "edge_29",
+      "fromNode": "zed",
+      "toNode": "workspace",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_30",
+      "fromNode": "zed",
+      "toNode": "gpui",
+      "color": "#E91E63",
+      "vv": {
+        "edgeType": "depends_on"
+      }
+    },
+    {
+      "id": "edge_31",
+      "fromNode": "zed",
+      "toNode": "project",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_32",
+      "fromNode": "zed",
+      "toNode": "extension",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_33",
+      "fromNode": "zed",
+      "toNode": "client",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_34",
+      "fromNode": "zed",
+      "toNode": "agent",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_35",
+      "fromNode": "zed",
+      "toNode": "terminal",
+      "color": "#FF9900",
+      "vv": {
+        "edgeType": "manages"
+      }
+    },
+    {
+      "id": "edge_36",
+      "fromNode": "zed",
+      "toNode": "ui",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "edge_37",
+      "fromNode": "zed",
+      "toNode": "theme",
+      "color": "#9B59B6",
+      "vv": {
+        "edgeType": "uses"
+      }
+    }
+  ]
+}

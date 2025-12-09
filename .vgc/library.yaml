@@ -1,0 +1,225 @@
+version: "1.0.0"
+name: "Zed Architecture Component Library"
+
+nodeComponents:
+  # Foundation Layer
+  gpui:
+    label: "GPUI"
+    description: "GPU-accelerated UI framework - foundation of all UI"
+    color: 6
+    icon: "Layers"
+
+  data_structures:
+    label: "Data Structures"
+    description: "rope, sum_tree, text, collections"
+    color: 6
+    icon: "Database"
+
+  # Editor Core
+  editor:
+    label: "Editor"
+    description: "Core editor functionality, text editing, selections"
+    color: 4
+    icon: "FileEdit"
+
+  multi_buffer:
+    label: "Multi Buffer"
+    description: "Manages multiple text buffers and excerpts"
+    color: 4
+    icon: "Files"
+
+  language:
+    label: "Language"
+    description: "Tree-sitter integration, syntax highlighting"
+    color: 4
+    icon: "Code"
+
+  lsp:
+    label: "LSP"
+    description: "Language Server Protocol client"
+    color: 4
+    icon: "Sparkles"
+
+  # Project & Workspace
+  project:
+    label: "Project"
+    description: "Central project coordination, LSP management"
+    color: 5
+    icon: "FolderOpen"
+
+  workspace:
+    label: "Workspace"
+    description: "Window/workspace management, panels, panes"
+    color: 5
+    icon: "LayoutGrid"
+
+  worktree:
+    label: "Worktree"
+    description: "File tree representation, git integration"
+    color: 5
+    icon: "FolderTree"
+
+  file_system:
+    label: "File System"
+    description: "Abstract file system interface, file watching"
+    color: 5
+    icon: "HardDrive"
+
+  # Collaboration
+  collab:
+    label: "Collab Server"
+    description: "Real-time collaboration server (AGPL)"
+    color: 2
+    icon: "Server"
+
+  rpc:
+    label: "RPC"
+    description: "Communication protocol, protobuf messages"
+    color: 2
+    icon: "Radio"
+
+  client:
+    label: "Client"
+    description: "Client-side networking, authentication"
+    color: 2
+    icon: "User"
+
+  call:
+    label: "Call"
+    description: "Audio/video calling, LiveKit integration"
+    color: 2
+    icon: "Video"
+
+  # AI & Language Models
+  agent:
+    label: "Agent"
+    description: "AI assistant, MCP implementation"
+    color: 3
+    icon: "Bot"
+
+  language_model:
+    label: "Language Model"
+    description: "LLM provider abstraction layer"
+    color: 3
+    icon: "Brain"
+
+  context_server:
+    label: "Context Server"
+    description: "Context management for AI (MCP)"
+    color: 3
+    icon: "BookOpen"
+
+  llm_providers:
+    label: "LLM Providers"
+    description: "Anthropic, OpenAI, Bedrock, Ollama, etc."
+    color: 3
+    icon: "Plug"
+
+  # Developer Tools
+  terminal:
+    label: "Terminal"
+    description: "Terminal emulator with shell integration"
+    color: 1
+    icon: "Terminal"
+
+  repl:
+    label: "REPL"
+    description: "Jupyter notebook integration"
+    color: 1
+    icon: "Play"
+
+  debugger:
+    label: "Debugger"
+    description: "DAP (Debug Adapter Protocol) support"
+    color: 1
+    icon: "Bug"
+
+  diagnostics:
+    label: "Diagnostics"
+    description: "Error/warning display, problems panel"
+    color: 1
+    icon: "AlertCircle"
+
+  search:
+    label: "Search"
+    description: "Project-wide search and replace"
+    color: 1
+    icon: "Search"
+
+  # Extension System
+  extension:
+    label: "Extension"
+    description: "Extension loading and management"
+    color: 6
+    icon: "Puzzle"
+
+  extension_api:
+    label: "Extension API"
+    description: "Public API for building extensions"
+    color: 6
+    icon: "Box"
+
+  extension_host:
+    label: "Extension Host"
+    description: "WASM runtime for extensions (wasmtime)"
+    color: 6
+    icon: "Container"
+
+  # Remote Development
+  remote:
+    label: "Remote (Client)"
+    description: "Client-side remote editing via SSH"
+    color: 5
+    icon: "Cloud"
+
+  remote_server:
+    label: "Remote Server"
+    description: "Server-side remote component"
+    color: 5
+    icon: "CloudCog"
+
+  # UI & Theming
+  ui:
+    label: "UI Components"
+    description: "Reusable UI components (buttons, inputs, etc.)"
+    color: 4
+    icon: "Package"
+
+  theme:
+    label: "Theme"
+    description: "Theme system, color schemes, styling"
+    color: 4
+    icon: "Palette"
+
+  # Main Application
+  zed:
+    label: "Zed"
+    description: "Main application - integrates all components"
+    color: "#FF6B6B"
+    icon: "Zap"
+
+edgeComponents:
+  depends_on:
+    label: "depends on"
+    style: "solid"
+    color: "#666666"
+
+  uses:
+    label: "uses"
+    style: "dashed"
+    color: "#999999"
+
+  communicates:
+    label: "communicates"
+    style: "dotted"
+    color: "#0088FF"
+
+  extends:
+    label: "extends"
+    style: "solid"
+    color: "#00CC66"
+
+  manages:
+    label: "manages"
+    style: "solid"
+    color: "#FF9900"
