@@ -8,7 +8,7 @@
       "width": 180,
       "height": 100,
       "text": "**App**\n\nRoot context with global state",
-      "vv": {
+      "pv": {
         "nodeType": "context",
         "shape": "rectangle",
         "fill": "#3b82f6",
@@ -27,7 +27,7 @@
       "width": 180,
       "height": 100,
       "text": "**Context<T>**\n\nEntity-specific context",
-      "vv": {
+      "pv": {
         "nodeType": "context",
         "shape": "rectangle",
         "fill": "#3b82f6",
@@ -46,7 +46,7 @@
       "width": 200,
       "height": 100,
       "text": "**Async Contexts**\n\nAsyncApp\nAsyncWindowContext",
-      "vv": {
+      "pv": {
         "nodeType": "context",
         "shape": "rectangle",
         "fill": "#ec4899",
@@ -65,7 +65,7 @@
       "width": 180,
       "height": 100,
       "text": "**Window**\n\nFocus, actions, input",
-      "vv": {
+      "pv": {
         "nodeType": "window",
         "shape": "rectangle",
         "fill": "#f59e0b",
@@ -84,7 +84,7 @@
       "width": 180,
       "height": 100,
       "text": "**Entity<T>**\n\nStrong handle to state",
-      "vv": {
+      "pv": {
         "nodeType": "entity",
         "shape": "hexagon",
         "fill": "#10b981",
@@ -103,7 +103,7 @@
       "width": 180,
       "height": 100,
       "text": "**WeakEntity<T>**\n\nWeak handle",
-      "vv": {
+      "pv": {
         "nodeType": "entity",
         "shape": "hexagon",
         "fill": "#f97316",
@@ -122,7 +122,7 @@
       "width": 180,
       "height": 100,
       "text": "**Render Trait**\n\nState to elements",
-      "vv": {
+      "pv": {
         "nodeType": "rendering",
         "shape": "rectangle",
         "fill": "#8b5cf6",
@@ -141,7 +141,7 @@
       "width": 180,
       "height": 100,
       "text": "**Element System**\n\nFlexbox layout",
-      "vv": {
+      "pv": {
         "nodeType": "rendering",
         "shape": "rectangle",
         "fill": "#8b5cf6",
@@ -161,7 +161,7 @@
       "width": 180,
       "height": 100,
       "text": "**Actions**\n\nAction dispatch",
-      "vv": {
+      "pv": {
         "nodeType": "events",
         "shape": "diamond",
         "fill": "#06b6d4",
@@ -180,7 +180,7 @@
       "width": 180,
       "height": 100,
       "text": "**Keymap System**\n\nKeyboard bindings",
-      "vv": {
+      "pv": {
         "nodeType": "events",
         "shape": "diamond",
         "fill": "#06b6d4",
@@ -199,7 +199,7 @@
       "width": 180,
       "height": 100,
       "text": "**Entity Events**\n\nEmit & subscribe",
-      "vv": {
+      "pv": {
         "nodeType": "events",
         "shape": "diamond",
         "fill": "#06b6d4",
@@ -218,7 +218,7 @@
       "width": 180,
       "height": 100,
       "text": "**Task System**\n\nForeground/background",
-      "vv": {
+      "pv": {
         "nodeType": "async",
         "shape": "rectangle",
         "fill": "#eab308",
@@ -237,7 +237,7 @@
       "width": 180,
       "height": 100,
       "text": "**Text System**\n\nText layout & shaping",
-      "vv": {
+      "pv": {
         "nodeType": "rendering",
         "shape": "rectangle",
         "fill": "#8b5cf6",
@@ -256,7 +256,7 @@
       "width": 180,
       "height": 100,
       "text": "**Platform Layer**\n\nMetal, Blade, etc.",
-      "vv": {
+      "pv": {
         "nodeType": "platform",
         "shape": "rectangle",
         "fill": "#64748b",
@@ -275,7 +275,7 @@
       "width": 180,
       "height": 100,
       "text": "**Test Context**\n\nTesting utilities",
-      "vv": {
+      "pv": {
         "nodeType": "testing",
         "shape": "rectangle",
         "fill": "#94a3b8",
@@ -294,7 +294,7 @@
       "fromNode": "entity-context",
       "toNode": "app-context",
       "label": "derefs to",
-      "vv": {
+      "pv": {
         "edgeType": "deref"
       }
     },
@@ -303,7 +303,7 @@
       "fromNode": "entity-context",
       "toNode": "async-context",
       "label": "spawn",
-      "vv": {
+      "pv": {
         "edgeType": "convert"
       }
     },
@@ -312,7 +312,7 @@
       "fromNode": "app-context",
       "toNode": "async-context",
       "label": "to_async",
-      "vv": {
+      "pv": {
         "edgeType": "convert"
       }
     },
@@ -321,7 +321,7 @@
       "fromNode": "entity",
       "toNode": "weak-entity",
       "label": "downgrade",
-      "vv": {
+      "pv": {
         "edgeType": "convert"
       }
     },
@@ -330,7 +330,7 @@
       "fromNode": "entity",
       "toNode": "entity-context",
       "label": "update",
-      "vv": {
+      "pv": {
         "edgeType": "provides"
       }
     },
@@ -339,7 +339,7 @@
       "fromNode": "entity",
       "toNode": "render",
       "label": "implements",
-      "vv": {
+      "pv": {
         "edgeType": "implements"
       }
     },
@@ -348,7 +348,7 @@
       "fromNode": "render",
       "toNode": "element",
       "label": "produces",
-      "vv": {
+      "pv": {
         "edgeType": "dataflow"
       }
     },
@@ -357,7 +357,7 @@
       "fromNode": "element",
       "toNode": "platform",
       "label": "rendered by",
-      "vv": {
+      "pv": {
         "edgeType": "dataflow"
       }
     },
@@ -366,7 +366,7 @@
       "fromNode": "actions",
       "toNode": "window",
       "label": "dispatch",
-      "vv": {
+      "pv": {
         "edgeType": "dispatch"
       }
     },
@@ -375,7 +375,7 @@
       "fromNode": "keymap",
       "toNode": "actions",
       "label": "triggers",
-      "vv": {
+      "pv": {
         "edgeType": "triggers"
       }
     },
@@ -384,7 +384,7 @@
       "fromNode": "element",
       "toNode": "actions",
       "label": "handles",
-      "vv": {
+      "pv": {
         "edgeType": "handles"
       }
     },
@@ -393,7 +393,7 @@
       "fromNode": "entity",
       "toNode": "events",
       "label": "emits",
-      "vv": {
+      "pv": {
         "edgeType": "emits"
       }
     },
@@ -402,7 +402,7 @@
       "fromNode": "entity",
       "toNode": "events",
       "label": "subscribes",
-      "vv": {
+      "pv": {
         "edgeType": "subscribes"
       }
     },
@@ -411,7 +411,7 @@
       "fromNode": "entity-context",
       "toNode": "tasks",
       "label": "spawns",
-      "vv": {
+      "pv": {
         "edgeType": "spawns"
       }
     },
@@ -420,7 +420,7 @@
       "fromNode": "async-context",
       "toNode": "entity",
       "label": "updates",
-      "vv": {
+      "pv": {
         "edgeType": "updates"
       }
     },
@@ -429,7 +429,7 @@
       "fromNode": "text-system",
       "toNode": "element",
       "label": "provides text",
-      "vv": {
+      "pv": {
         "edgeType": "provides"
       }
     },
@@ -438,54 +438,46 @@
       "fromNode": "window",
       "toNode": "element",
       "label": "manages",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     }
   ],
-  "vv": {
+  "pv": {
     "name": "GPUI Implementation",
     "version": "1.0.0",
     "nodeTypes": {
       "context": {
         "shape": "rectangle",
-        "fill": "#3b82f6",
-        "stroke": "#1d4ed8"
+        "color": "#3b82f6"
       },
       "window": {
         "shape": "rectangle",
-        "fill": "#f59e0b",
-        "stroke": "#d97706"
+        "color": "#f59e0b"
       },
       "entity": {
         "shape": "hexagon",
-        "fill": "#10b981",
-        "stroke": "#059669"
+        "color": "#10b981"
       },
       "rendering": {
         "shape": "rectangle",
-        "fill": "#8b5cf6",
-        "stroke": "#7c3aed"
+        "color": "#8b5cf6"
       },
       "events": {
         "shape": "diamond",
-        "fill": "#06b6d4",
-        "stroke": "#0891b2"
+        "color": "#06b6d4"
       },
       "async": {
         "shape": "rectangle",
-        "fill": "#eab308",
-        "stroke": "#ca8a04"
+        "color": "#eab308"
       },
       "platform": {
         "shape": "rectangle",
-        "fill": "#64748b",
-        "stroke": "#475569"
+        "color": "#64748b"
       },
       "testing": {
         "shape": "rectangle",
-        "fill": "#94a3b8",
-        "stroke": "#64748b"
+        "color": "#94a3b8"
       }
     },
     "edgeTypes": {

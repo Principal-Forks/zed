@@ -1,5 +1,5 @@
 {
-  "vv": {
+  "pv": {
     "name": "Zed Codebase Architecture",
     "version": "1.0.0",
     "nodeTypes": {
@@ -228,7 +228,7 @@
       "width": 150,
       "height": 80,
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "nodeType": "gpui",
         "shape": "rect"
       }
@@ -242,7 +242,7 @@
       "width": 150,
       "height": 80,
       "color": "#8E44AD",
-      "vv": {
+      "pv": {
         "nodeType": "data_structures",
         "shape": "rect"
       }
@@ -256,7 +256,7 @@
       "width": 150,
       "height": 80,
       "color": "#27AE60",
-      "vv": {
+      "pv": {
         "nodeType": "editor",
         "shape": "rect"
       }
@@ -270,7 +270,7 @@
       "width": 150,
       "height": 80,
       "color": "#2ECC71",
-      "vv": {
+      "pv": {
         "nodeType": "multi_buffer",
         "shape": "rect"
       }
@@ -284,7 +284,7 @@
       "width": 150,
       "height": 80,
       "color": "#27AE60",
-      "vv": {
+      "pv": {
         "nodeType": "language",
         "shape": "rect"
       }
@@ -298,7 +298,7 @@
       "width": 150,
       "height": 80,
       "color": "#2ECC71",
-      "vv": {
+      "pv": {
         "nodeType": "lsp",
         "shape": "rect"
       }
@@ -312,7 +312,7 @@
       "width": 150,
       "height": 80,
       "color": "#3498DB",
-      "vv": {
+      "pv": {
         "nodeType": "project",
         "shape": "rect"
       }
@@ -326,7 +326,7 @@
       "width": 150,
       "height": 80,
       "color": "#2980B9",
-      "vv": {
+      "pv": {
         "nodeType": "workspace",
         "shape": "rect"
       }
@@ -340,7 +340,7 @@
       "width": 150,
       "height": 80,
       "color": "#3498DB",
-      "vv": {
+      "pv": {
         "nodeType": "worktree",
         "shape": "rect"
       }
@@ -354,7 +354,7 @@
       "width": 150,
       "height": 80,
       "color": "#5DADE2",
-      "vv": {
+      "pv": {
         "nodeType": "file_system",
         "shape": "rect"
       }
@@ -368,7 +368,7 @@
       "width": 150,
       "height": 80,
       "color": "#E67E22",
-      "vv": {
+      "pv": {
         "nodeType": "collab",
         "shape": "rect"
       }
@@ -382,7 +382,7 @@
       "width": 150,
       "height": 80,
       "color": "#D68910",
-      "vv": {
+      "pv": {
         "nodeType": "rpc",
         "shape": "rect"
       }
@@ -396,7 +396,7 @@
       "width": 150,
       "height": 80,
       "color": "#E67E22",
-      "vv": {
+      "pv": {
         "nodeType": "client",
         "shape": "rect"
       }
@@ -410,7 +410,7 @@
       "width": 150,
       "height": 80,
       "color": "#F39C12",
-      "vv": {
+      "pv": {
         "nodeType": "call",
         "shape": "rect"
       }
@@ -424,7 +424,7 @@
       "width": 150,
       "height": 80,
       "color": "#F1C40F",
-      "vv": {
+      "pv": {
         "nodeType": "agent",
         "shape": "rect"
       }
@@ -438,7 +438,7 @@
       "width": 150,
       "height": 80,
       "color": "#F4D03F",
-      "vv": {
+      "pv": {
         "nodeType": "language_model",
         "shape": "rect"
       }
@@ -452,7 +452,7 @@
       "width": 150,
       "height": 80,
       "color": "#F1C40F",
-      "vv": {
+      "pv": {
         "nodeType": "context_server",
         "shape": "rect"
       }
@@ -466,7 +466,7 @@
       "width": 150,
       "height": 80,
       "color": "#F9E79F",
-      "vv": {
+      "pv": {
         "nodeType": "llm_providers",
         "shape": "rect"
       }
@@ -480,7 +480,7 @@
       "width": 150,
       "height": 80,
       "color": "#E74C3C",
-      "vv": {
+      "pv": {
         "nodeType": "terminal",
         "shape": "rect"
       }
@@ -494,7 +494,7 @@
       "width": 150,
       "height": 80,
       "color": "#C0392B",
-      "vv": {
+      "pv": {
         "nodeType": "repl",
         "shape": "rect"
       }
@@ -508,7 +508,7 @@
       "width": 150,
       "height": 80,
       "color": "#E74C3C",
-      "vv": {
+      "pv": {
         "nodeType": "debugger",
         "shape": "rect"
       }
@@ -522,7 +522,7 @@
       "width": 150,
       "height": 80,
       "color": "#EC7063",
-      "vv": {
+      "pv": {
         "nodeType": "diagnostics",
         "shape": "rect"
       }
@@ -536,7 +536,7 @@
       "width": 150,
       "height": 80,
       "color": "#E74C3C",
-      "vv": {
+      "pv": {
         "nodeType": "search",
         "shape": "rect"
       }
@@ -550,7 +550,7 @@
       "width": 150,
       "height": 80,
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "nodeType": "extension",
         "shape": "rect"
       }
@@ -564,7 +564,7 @@
       "width": 150,
       "height": 80,
       "color": "#8E44AD",
-      "vv": {
+      "pv": {
         "nodeType": "extension_api",
         "shape": "rect"
       }
@@ -578,7 +578,7 @@
       "width": 150,
       "height": 80,
       "color": "#7D3C98",
-      "vv": {
+      "pv": {
         "nodeType": "extension_host",
         "shape": "rect"
       }
@@ -592,7 +592,7 @@
       "width": 150,
       "height": 80,
       "color": "#1ABC9C",
-      "vv": {
+      "pv": {
         "nodeType": "remote",
         "shape": "rect"
       }
@@ -606,7 +606,7 @@
       "width": 150,
       "height": 80,
       "color": "#16A085",
-      "vv": {
+      "pv": {
         "nodeType": "remote_server",
         "shape": "rect"
       }
@@ -620,7 +620,7 @@
       "width": 150,
       "height": 80,
       "color": "#27AE60",
-      "vv": {
+      "pv": {
         "nodeType": "ui",
         "shape": "rect"
       }
@@ -634,7 +634,7 @@
       "width": 150,
       "height": 80,
       "color": "#2ECC71",
-      "vv": {
+      "pv": {
         "nodeType": "theme",
         "shape": "rect"
       }
@@ -648,7 +648,7 @@
       "width": 150,
       "height": 80,
       "color": "#FF6B6B",
-      "vv": {
+      "pv": {
         "nodeType": "zed",
         "shape": "rect"
       }
@@ -660,7 +660,7 @@
       "fromNode": "editor",
       "toNode": "gpui",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -669,7 +669,7 @@
       "fromNode": "ui",
       "toNode": "gpui",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -678,7 +678,7 @@
       "fromNode": "workspace",
       "toNode": "gpui",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -687,7 +687,7 @@
       "fromNode": "editor",
       "toNode": "multi_buffer",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -696,7 +696,7 @@
       "fromNode": "editor",
       "toNode": "language",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -705,7 +705,7 @@
       "fromNode": "multi_buffer",
       "toNode": "data_structures",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -714,7 +714,7 @@
       "fromNode": "language",
       "toNode": "lsp",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -723,7 +723,7 @@
       "fromNode": "project",
       "toNode": "language",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -732,7 +732,7 @@
       "fromNode": "project",
       "toNode": "lsp",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -741,7 +741,7 @@
       "fromNode": "project",
       "toNode": "worktree",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -750,7 +750,7 @@
       "fromNode": "worktree",
       "toNode": "file_system",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -759,7 +759,7 @@
       "fromNode": "workspace",
       "toNode": "project",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -768,7 +768,7 @@
       "fromNode": "workspace",
       "toNode": "editor",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -777,7 +777,7 @@
       "fromNode": "collab",
       "toNode": "rpc",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -786,7 +786,7 @@
       "fromNode": "client",
       "toNode": "rpc",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -795,7 +795,7 @@
       "fromNode": "client",
       "toNode": "collab",
       "color": "#0088FF",
-      "vv": {
+      "pv": {
         "edgeType": "communicates"
       }
     },
@@ -804,7 +804,7 @@
       "fromNode": "call",
       "toNode": "client",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -813,7 +813,7 @@
       "fromNode": "agent",
       "toNode": "language_model",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -822,7 +822,7 @@
       "fromNode": "agent",
       "toNode": "context_server",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -831,7 +831,7 @@
       "fromNode": "language_model",
       "toNode": "llm_providers",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -840,7 +840,7 @@
       "fromNode": "project",
       "toNode": "debugger",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -849,7 +849,7 @@
       "fromNode": "diagnostics",
       "toNode": "lsp",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -858,7 +858,7 @@
       "fromNode": "search",
       "toNode": "project",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -867,7 +867,7 @@
       "fromNode": "extension_host",
       "toNode": "extension_api",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -876,7 +876,7 @@
       "fromNode": "extension",
       "toNode": "extension_host",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -885,7 +885,7 @@
       "fromNode": "remote",
       "toNode": "remote_server",
       "color": "#0088FF",
-      "vv": {
+      "pv": {
         "edgeType": "communicates"
       }
     },
@@ -894,7 +894,7 @@
       "fromNode": "remote",
       "toNode": "project",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -903,7 +903,7 @@
       "fromNode": "theme",
       "toNode": "gpui",
       "color": "#00CC66",
-      "vv": {
+      "pv": {
         "edgeType": "extends"
       }
     },
@@ -912,7 +912,7 @@
       "fromNode": "zed",
       "toNode": "workspace",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -921,7 +921,7 @@
       "fromNode": "zed",
       "toNode": "gpui",
       "color": "#E91E63",
-      "vv": {
+      "pv": {
         "edgeType": "depends_on"
       }
     },
@@ -930,7 +930,7 @@
       "fromNode": "zed",
       "toNode": "project",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -939,7 +939,7 @@
       "fromNode": "zed",
       "toNode": "extension",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -948,7 +948,7 @@
       "fromNode": "zed",
       "toNode": "client",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -957,7 +957,7 @@
       "fromNode": "zed",
       "toNode": "agent",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -966,7 +966,7 @@
       "fromNode": "zed",
       "toNode": "terminal",
       "color": "#FF9900",
-      "vv": {
+      "pv": {
         "edgeType": "manages"
       }
     },
@@ -975,7 +975,7 @@
       "fromNode": "zed",
       "toNode": "ui",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -984,7 +984,7 @@
       "fromNode": "zed",
       "toNode": "theme",
       "color": "#9B59B6",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     }

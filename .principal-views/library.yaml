@@ -4,196 +4,196 @@ name: "Zed Architecture Component Library"
 nodeComponents:
   # Foundation Layer
   gpui:
-    label: "GPUI"
+    defaultLabel: "GPUI"
     description: "GPU-accelerated UI framework - foundation of all UI"
     color: 6
     icon: "Layers"
 
   data_structures:
-    label: "Data Structures"
+    defaultLabel: "Data Structures"
     description: "rope, sum_tree, text, collections"
     color: 6
     icon: "Database"
 
   # Editor Core
   editor:
-    label: "Editor"
+    defaultLabel: "Editor"
     description: "Core editor functionality, text editing, selections"
     color: 4
     icon: "FileEdit"
 
   multi_buffer:
-    label: "Multi Buffer"
+    defaultLabel: "Multi Buffer"
     description: "Manages multiple text buffers and excerpts"
     color: 4
     icon: "Files"
 
   language:
-    label: "Language"
+    defaultLabel: "Language"
     description: "Tree-sitter integration, syntax highlighting"
     color: 4
     icon: "Code"
 
   lsp:
-    label: "LSP"
+    defaultLabel: "LSP"
     description: "Language Server Protocol client"
     color: 4
     icon: "Sparkles"
 
   # Project & Workspace
   project:
-    label: "Project"
+    defaultLabel: "Project"
     description: "Central project coordination, LSP management"
     color: 5
     icon: "FolderOpen"
 
   workspace:
-    label: "Workspace"
+    defaultLabel: "Workspace"
     description: "Window/workspace management, panels, panes"
     color: 5
     icon: "LayoutGrid"
 
   worktree:
-    label: "Worktree"
+    defaultLabel: "Worktree"
     description: "File tree representation, git integration"
     color: 5
     icon: "FolderTree"
 
   file_system:
-    label: "File System"
+    defaultLabel: "File System"
     description: "Abstract file system interface, file watching"
     color: 5
     icon: "HardDrive"
 
   # Collaboration
   collab:
-    label: "Collab Server"
+    defaultLabel: "Collab Server"
     description: "Real-time collaboration server (AGPL)"
     color: 2
     icon: "Server"
 
   rpc:
-    label: "RPC"
+    defaultLabel: "RPC"
     description: "Communication protocol, protobuf messages"
     color: 2
     icon: "Radio"
 
   client:
-    label: "Client"
+    defaultLabel: "Client"
     description: "Client-side networking, authentication"
     color: 2
     icon: "User"
 
   call:
-    label: "Call"
+    defaultLabel: "Call"
     description: "Audio/video calling, LiveKit integration"
     color: 2
     icon: "Video"
 
   # AI & Language Models
   agent:
-    label: "Agent"
+    defaultLabel: "Agent"
     description: "AI assistant, MCP implementation"
     color: 3
     icon: "Bot"
 
   language_model:
-    label: "Language Model"
+    defaultLabel: "Language Model"
     description: "LLM provider abstraction layer"
     color: 3
     icon: "Brain"
 
   context_server:
-    label: "Context Server"
+    defaultLabel: "Context Server"
     description: "Context management for AI (MCP)"
     color: 3
     icon: "BookOpen"
 
   llm_providers:
-    label: "LLM Providers"
+    defaultLabel: "LLM Providers"
     description: "Anthropic, OpenAI, Bedrock, Ollama, etc."
     color: 3
     icon: "Plug"
 
   # Developer Tools
   terminal:
-    label: "Terminal"
+    defaultLabel: "Terminal"
     description: "Terminal emulator with shell integration"
     color: 1
     icon: "Terminal"
 
   repl:
-    label: "REPL"
+    defaultLabel: "REPL"
     description: "Jupyter notebook integration"
     color: 1
     icon: "Play"
 
   debugger:
-    label: "Debugger"
+    defaultLabel: "Debugger"
     description: "DAP (Debug Adapter Protocol) support"
     color: 1
     icon: "Bug"
 
   diagnostics:
-    label: "Diagnostics"
+    defaultLabel: "Diagnostics"
     description: "Error/warning display, problems panel"
     color: 1
     icon: "AlertCircle"
 
   search:
-    label: "Search"
+    defaultLabel: "Search"
     description: "Project-wide search and replace"
     color: 1
     icon: "Search"
 
   # Extension System
   extension:
-    label: "Extension"
+    defaultLabel: "Extension"
     description: "Extension loading and management"
     color: 6
     icon: "Puzzle"
 
   extension_api:
-    label: "Extension API"
+    defaultLabel: "Extension API"
     description: "Public API for building extensions"
     color: 6
     icon: "Box"
 
   extension_host:
-    label: "Extension Host"
+    defaultLabel: "Extension Host"
     description: "WASM runtime for extensions (wasmtime)"
     color: 6
     icon: "Container"
 
   # Remote Development
   remote:
-    label: "Remote (Client)"
+    defaultLabel: "Remote (Client)"
     description: "Client-side remote editing via SSH"
     color: 5
     icon: "Cloud"
 
   remote_server:
-    label: "Remote Server"
+    defaultLabel: "Remote Server"
     description: "Server-side remote component"
     color: 5
     icon: "CloudCog"
 
   # UI & Theming
   ui:
-    label: "UI Components"
+    defaultLabel: "UI Components"
     description: "Reusable UI components (buttons, inputs, etc.)"
     color: 4
     icon: "Package"
 
   theme:
-    label: "Theme"
+    defaultLabel: "Theme"
     description: "Theme system, color schemes, styling"
     color: 4
     icon: "Palette"
 
   # Main Application
   zed:
-    label: "Zed"
+    defaultLabel: "Zed"
     description: "Main application - integrates all components"
     color: "#FF6B6B"
     icon: "Zap"
