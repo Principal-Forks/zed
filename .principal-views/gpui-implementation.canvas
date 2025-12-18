@@ -291,7 +291,9 @@
   "edges": [
     {
       "id": "edge-1",
+      "fromSide": "left",
       "fromNode": "entity-context",
+      "toSide": "right",
       "toNode": "app-context",
       "label": "derefs to",
       "pv": {
@@ -300,7 +302,9 @@
     },
     {
       "id": "edge-2",
+      "fromSide": "bottom",
       "fromNode": "entity-context",
+      "toSide": "top",
       "toNode": "async-context",
       "label": "spawn",
       "pv": {
@@ -309,7 +313,9 @@
     },
     {
       "id": "edge-3",
+      "fromSide": "left",
       "fromNode": "app-context",
+      "toSide": "right",
       "toNode": "async-context",
       "label": "to_async",
       "pv": {
@@ -318,7 +324,9 @@
     },
     {
       "id": "edge-4",
+      "fromSide": "top",
       "fromNode": "entity",
+      "toSide": "bottom",
       "toNode": "weak-entity",
       "label": "downgrade",
       "pv": {
@@ -327,7 +335,9 @@
     },
     {
       "id": "edge-5",
+      "fromSide": "left",
       "fromNode": "entity",
+      "toSide": "right",
       "toNode": "entity-context",
       "label": "update",
       "pv": {
@@ -336,7 +346,9 @@
     },
     {
       "id": "edge-6",
+      "fromSide": "top",
       "fromNode": "entity",
+      "toSide": "bottom",
       "toNode": "render",
       "label": "implements",
       "pv": {
@@ -345,7 +357,9 @@
     },
     {
       "id": "edge-7",
+      "fromSide": "bottom",
       "fromNode": "render",
+      "toSide": "top",
       "toNode": "element",
       "label": "produces",
       "pv": {
@@ -354,7 +368,9 @@
     },
     {
       "id": "edge-8",
+      "fromSide": "bottom",
       "fromNode": "element",
+      "toSide": "top",
       "toNode": "platform",
       "label": "rendered by",
       "pv": {
@@ -363,7 +379,9 @@
     },
     {
       "id": "edge-9",
+      "fromSide": "top",
       "fromNode": "actions",
+      "toSide": "bottom",
       "toNode": "window",
       "label": "dispatch",
       "pv": {
@@ -372,7 +390,9 @@
     },
     {
       "id": "edge-10",
+      "fromSide": "top",
       "fromNode": "keymap",
+      "toSide": "bottom",
       "toNode": "actions",
       "label": "triggers",
       "pv": {
@@ -381,7 +401,9 @@
     },
     {
       "id": "edge-11",
+      "fromSide": "top",
       "fromNode": "element",
+      "toSide": "right",
       "toNode": "actions",
       "label": "handles",
       "pv": {
@@ -390,7 +412,9 @@
     },
     {
       "id": "edge-12",
+      "fromSide": "right",
       "fromNode": "entity",
+      "toSide": "left",
       "toNode": "events",
       "label": "emits",
       "pv": {
@@ -399,7 +423,9 @@
     },
     {
       "id": "edge-13",
+      "fromSide": "right",
       "fromNode": "entity",
+      "toSide": "left",
       "toNode": "events",
       "label": "subscribes",
       "pv": {
@@ -408,7 +434,9 @@
     },
     {
       "id": "edge-14",
+      "fromSide": "right",
       "fromNode": "entity-context",
+      "toSide": "bottom",
       "toNode": "tasks",
       "label": "spawns",
       "pv": {
@@ -417,7 +445,9 @@
     },
     {
       "id": "edge-15",
+      "fromSide": "left",
       "fromNode": "async-context",
+      "toSide": "top",
       "toNode": "entity",
       "label": "updates",
       "pv": {
@@ -426,7 +456,9 @@
     },
     {
       "id": "edge-16",
+      "fromSide": "top",
       "fromNode": "text-system",
+      "toSide": "right",
       "toNode": "element",
       "label": "provides text",
       "pv": {
@@ -435,7 +467,9 @@
     },
     {
       "id": "edge-17",
+      "fromSide": "left",
       "fromNode": "window",
+      "toSide": "bottom",
       "toNode": "element",
       "label": "manages",
       "pv": {

@@ -662,7 +662,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "left"
     },
     {
       "id": "edge_2",
@@ -671,7 +673,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "bottom"
     },
     {
       "id": "edge_3",
@@ -680,7 +684,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "bottom"
     },
     {
       "id": "edge_4",
@@ -689,7 +695,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_5",
@@ -698,7 +706,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_6",
@@ -707,7 +717,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_7",
@@ -716,7 +728,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_8",
@@ -725,7 +739,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "top",
+      "toSide": "bottom"
     },
     {
       "id": "edge_9",
@@ -734,7 +750,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_10",
@@ -743,7 +761,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_11",
@@ -752,7 +772,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "top",
+      "toSide": "bottom"
     },
     {
       "id": "edge_12",
@@ -761,7 +783,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "left"
     },
     {
       "id": "edge_13",
@@ -770,7 +794,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_14",
@@ -779,7 +805,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_15",
@@ -788,7 +816,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_16",
@@ -797,7 +827,9 @@
       "color": "#0088FF",
       "pv": {
         "edgeType": "communicates"
-      }
+      },
+      "fromSide": "top",
+      "toSide": "bottom"
     },
     {
       "id": "edge_17",
@@ -806,7 +838,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_18",
@@ -815,7 +849,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_19",
@@ -824,7 +860,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "left",
+      "toSide": "right"
     },
     {
       "id": "edge_20",
@@ -833,7 +871,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_21",
@@ -842,7 +882,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_22",
@@ -851,7 +893,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_23",
@@ -860,7 +904,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_24",
@@ -869,7 +915,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_25",
@@ -878,7 +926,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_26",
@@ -887,7 +937,9 @@
       "color": "#0088FF",
       "pv": {
         "edgeType": "communicates"
-      }
+      },
+      "fromSide": "top",
+      "toSide": "bottom"
     },
     {
       "id": "edge_27",
@@ -896,7 +948,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "left",
+      "toSide": "left"
     },
     {
       "id": "edge_28",
@@ -905,7 +959,9 @@
       "color": "#00CC66",
       "pv": {
         "edgeType": "extends"
-      }
+      },
+      "fromSide": "left",
+      "toSide": "right"
     },
     {
       "id": "edge_29",
@@ -914,7 +970,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "bottom",
+      "toSide": "top"
     },
     {
       "id": "edge_30",
@@ -923,7 +981,9 @@
       "color": "#E91E63",
       "pv": {
         "edgeType": "depends_on"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "top"
     },
     {
       "id": "edge_31",
@@ -932,7 +992,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_32",
@@ -941,7 +1003,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_33",
@@ -950,7 +1014,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_34",
@@ -959,7 +1025,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "right"
     },
     {
       "id": "edge_35",
@@ -968,7 +1036,9 @@
       "color": "#FF9900",
       "pv": {
         "edgeType": "manages"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_36",
@@ -977,7 +1047,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     },
     {
       "id": "edge_37",
@@ -986,7 +1058,9 @@
       "color": "#9B59B6",
       "pv": {
         "edgeType": "uses"
-      }
+      },
+      "fromSide": "right",
+      "toSide": "left"
     }
   ]
 }
